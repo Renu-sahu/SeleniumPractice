@@ -1,0 +1,43 @@
+1. Methods:
+	
+	General structure for Methods as- 
+	1.1 Access Specifier: method name should starts with method specifier - public,private, protected, default
+	1.2 Static/final/abstract - need to specify
+	1.3 Return Type - String, int - if no return type then Void  - 'Mondatory field'
+	1.4 MethodName(Parameter) - if we pass parameter - if not then it should blank like MethodName()
+	
+2. OOPs concept
+	2.1 Class - blue print to create an individual object
+	2.2 Object - instance of class crreated with the help of new keyword
+	2.3 Inheritance
+	2.4 Polymorphism
+	2.5 Abstraction
+	2.6 Encapsulation
+	
+2.3 Inheritance:  single level, multilevel, hirechical, multiple (not possible in java due to ambiguity issue)
+						Object created under main method
+						
+2.4 Polymorphism: 2 types of Polymorphism we have 
+					1. Method Overloading
+					2. Method Overriding
+				
+				1. Method Overloading: Here we can have many method with same method name and diff signature as with/without parameter, diff number
+									   of parameter, order of parameter, count of parameter
+				2. Method Overriding: Here Method name and parameter both will be same. 
+									  It can be achived using Inheritance.
+									  
+2.5 Abstraction: Abstract class contains both Abstract and non abstract method. where for abstract method body will not present but for 
+				 non abstract method can have body.
+				   1. Here we just declare the method but not defining is abstract method.
+				   2. we need to specifiy abstract method/class by Abstract keyword.
+	Interface:	Abstraction can achived by Interface 
+				   1. Interface can have only abstract methods
+				   2. class can be implements the Interface (instead extends)
+				   3. only declaration should present for Method.
+
+2.6 Encapsulation: here wrapped data into a single unit
+				   By using: 1. getters - to retrieve value
+							 2. setters - to pass value
+							 
+							 
+							 

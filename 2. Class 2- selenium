@@ -1,0 +1,44 @@
+1. STATIC and FINAL Keyword
+	1.1 Static
+		a. Static Variable
+		b. Static Method
+		c. Static block
+		
+Question 1: Why we are using Static?
+ANswer: it is declared as global - outside method and inside the class
+		we need to write static keyword for static variable/method/block
+		
+		In Java, the static keyword is used for memory management primarily, and it allows for the following features and behaviors:
+		Class-level Variables and Methods: Static members (variables or methods) belong to the class rather than to any specific instance. 
+		                                   This means that all instances of the class share the same static variable or method. 
+										   You can access static members without creating an instance of the class.
+
+								java
+								Copy code
+								public class MyClass {
+									static int myStaticVar = 5;
+
+									static void myStaticMethod() {
+										System.out.println("Static method called");
+									}
+								}
+								public class Main {
+									public static void main(String[] args) {
+										// Accessing static variable and method without creating an instance
+										System.out.println(MyClass.myStaticVar);
+										MyClass.myStaticMethod();
+									}
+								}
+		Memory Efficiency: Static variables are stored in the method area (part of the JVM memory structure) rather than in the heap 
+							(where instance variables are stored). This can be more efficient if you need to store a constant value or if 
+							you need a method that can be shared among all instances of a class.
+
+		Utility or Helper Methods: Static methods are often used for utility or helper methods that perform a task that is not dependent 
+								   on instance variables. For example, java.lang.Math contains many static methods for mathematical operations like Math.sqrt(), Math.pow(), etc.
+
+		Singletons: The static keyword can be used to implement the Singleton pattern, ensuring that a class has only one instance and 
+					provides a global point of access to it.
+
+		Static Blocks: Static blocks can be used to initialize static variables. This is particularly useful for complex initializations.
+
+

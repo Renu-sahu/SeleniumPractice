@@ -1,0 +1,195 @@
+1. Selenium Setup
+
+	1.1 'Jdk' Download
+		1. Search in google - jdk download
+		2. Select Official website - www.oracle.com (1st link)
+		3. Always select latest long term support release - now jdk 21 - select jdk21 tab
+		4. Click on windows and click on x64 MSI installer - https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.msi (sha256)
+		5. Click on Next - Next and when see installed message click on - close
+		
+	1.2 Set 'Java home path' in system variables
+		1. Got to c folder - this PC
+		2. program files - java - jdk 21 folder - open and copy path (C:\Program Files\Java\jdk-21) as home path of java
+		3. now go to search bar in system and type - Edit the system environment variables
+		4. Click environmental variables - Click on New button for System variables 
+		5. Give Variable name as -  JAVA_HOME and Variable Value: java home path (C:\Program Files\Java\jdk-21) and click on ok.
+		
+	1.3 Give Path for 'bin directory'
+		1. in java home path - under jdk 21 - open bin folder
+		2. Copy path of bin difrectory (C:\Program Files\Java\jdk-21\bin)
+		3. open - Edit the system environment variables again - click on Path - edit
+		4. list of path open - click on New to add new path of bin as 'C:\Program Files\Java\jdk-21\bin' - click on ok.
+		
+Question: Why we do path setup 
+Answer: Becuase our editor - eclipse or any other will not know where Java is seating in our system. and it will refer from system variables.
+
+Can check in cmd - java -version enter
+
+Question: why we need Eclipse or any other
+Answer: we need editor to write our code. Eclipse is one of the editor
+
+	1.4 'Eclipse Download' 
+		1. Type eclipse download in google
+		2. Open official website - www.eclipse.org
+		3. Click on download packages hyperlink below Eclipse icon
+		4. Click on base one - "Eclipse IDE for java developers" from the list
+		5. Click on download link for windows - Windows x86_64, click on download button
+		6. Unzip folder - open eclipse set path and click on launch
+		7. go to file - new project give project name and click on next -Src folder should create 
+		8. Click on finish
+		
+		
+2. Writing Program in Java
+		2.1 click on Src create new package
+		2.2 open pacakge and create new class
+		
+	
+Question 3: Data Types?
+Answer: 2 Types: Primitive and Non Primitive
+		Primitive: int, char, boolean, double, float
+		Non-Primitive: String, class, Array
+		
+3. Declaration and Initiation of Variables
+	Declaration: only decalre the variable not giving any value - int n, String s
+	Initialization: Put any value in variable is initialization like - int n = 10, String s = "P"
+	
+	
+4. Rules for creating variables:
+	1. Names can contain letters, digits, underscore, and dollar signs
+	2. Names must begin with a letter, or $ or _
+	3. Names cannot contain whitespace
+	4. Names are case-sensitive ("myVar" and "myvar" is different variables)
+	5. Reserved words/ Keywords cannot be used as names
+
+5. Type Cast - shorter data type automatically casted to longer one but long range data type will not be fitted in shorter data type 
+			   so we need to do manuaaly for type casting
+			
+		5.1 Widening Casting(Automatically) - Converting a smaller type to a larger type size
+			Byte->Short-> char->int ->long->float->double
+			
+				cast for smallar/short range value in large range variable
+				double d1 = i;
+				System.out.println(d1);
+			
+		5.2 Narrowing Casting(Manually) - Converting a larger type to smallar size type
+			double->short->long-> int-> char ->short->byte
+		
+				Caste for larger range value in short range variable
+				int i1 = (int)d;
+				System.out.println(i1);
+				
+
+6. Operators
+		1. Arithmatic - +, -, *, /, %, ++, --
+		2. Assignment - =, +=, -=, *=, /=, %=  used for initiating the value basically
+		3. Comparison - ==, <, >, !=,<=, >=  - to compare the values, data
+		4. Logical - &&, ||, !- reverse output
+		5. Bitwise - 
+		6. Concat - it is using to join or sum up - if it is for numeric value the use + symbol and if want to append 2 or more string values
+					then use Concat operator.
+
+7. Pacakges and Import
+		1. package PackageName;
+		2. import PackageName.ClassName; - Here if we want to use any function - method, variable from diff package and class then use import
+
+
+8. Access Specifiers
+	1. Default -  Access for same package - same class,sub class, non sub class 
+	2. Private - Access only in same class
+	3. Protected - Access for same package - same class, sub class, non sub class, also access for diff package sub class 
+				   but not having access for non sub class for diff package
+	4. Public - Access everywhere same package, diff package - sub class, non sub class.
+	
+	
+	//*[@id='nav_cs_3']/a[5]
+	//*[@id="nav-xshop"]/a[5]
+							
+							
+	driver.manage().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS)
+	
+	WebDriverWait wait = new WebDriverWait(WebDriver Reference, TimeOut);
+	
+	Wait wait = new FluentWait(WebDriver reference).withTimeout(timeout, SECONDS).pollingEvery(timeout, SECONDS).ignoring(Exception.class);
+	
+	
+	driver.findelement(By.id("csdgf")).sendkeys("Hello");
+	driver.findElement(By.linkText("").click();
+	
+	String Acttitle1 = driver.getTitle();
+	String ExpectedTitle = "TestPage"
+	if(Acttitle1.equalsIgnoreCase(ExpectedTitle){
+	}
+	
+	
+	WebElement D = driver.findelement(By.id("dropdwnoption"));
+	Select S = new select(D);
+	S.selectByIndex(4);
+	S.selectByValue("fasgd");
+	S.selectByVisibleText("srtye");
+	
+	String s = driver.getWindowHandle();
+	
+	driver.switchTO().window(s);
+	
+	for(String s:driver.getWindowHandles())
+	driver.switchTo().window(s);
+	
+	
+	Locate the browse button
+
+   WebElement browse =driver.findElement(By.id("uploadfile"));
+
+Pass the path of the file to be uploaded using sendKeys method
+
+    browse.sendKeys("D:\\SeleniumInterview\\UploadFile.txt");
+	
+	
+	driver.manage(),window().maximize();
+	
+dimention d = new dimention(100, 600)
+driver.manage().window().setSize(d);
+
+((javaScriptExecutor)driver).executeScript(window.resizeTO(100,600));
+
+
+AUTHENTICATION***************
+handle authentication pop-ups, verify its appearance and then handle them using an explicit wait command.
+
+Use the explicit wait command
+
+  WebDriverWait wait = new WebDriverWait(driver, 10);
+
+Alert class is used to verify the alert
+
+   Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+Once verified, provide the credentials
+
+  alert.authenticateUsing(new UserAndPassword(<username>, <password>));
+  
+  
+  DRAG and DROP**************
+  Actions actions = new Actions(driver);
+  webElement dragaable = driver.findELelemt(By.id("drag");
+   webElement droppable = driver.findELelemt(By.id("drop");	
+   actions.dragAndDrop(Dragaable,droppable).perform();
+   
+   actions.clickAndHold(draggable).release(droppable).perform();
+   
+   actions.moveToElement(draggable).clickAndHold().moveToElement(droppable).release().perform();
+   
+ Xpath***********
+Xpath=//*[@type='text']//following::input
+
+Xpath=//*[text()='Enterprise Testing']//ancestor::div  - Parent /grant parent
+
+Xpath=//*[@id='java_technologies']//child::li
+
+Xpath=//*[@type='submit']//preceding::input - before current node
+
+xpath=//*[@type='submit']//following-sibling::input
+
+Xpath=//*[@id='rt-feature']//parent::div
+
+
+   

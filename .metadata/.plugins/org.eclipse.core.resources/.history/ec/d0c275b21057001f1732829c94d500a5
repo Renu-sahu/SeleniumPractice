@@ -1,0 +1,13 @@
+package SamplePack;
+
+public class SplitPractice {
+
+	public static void main() {
+		
+		String s = "My Name is Renu";
+		
+		String[] a = s.split(" "); 
+		
+		System.out.println(a[3]);
+	}
+}
